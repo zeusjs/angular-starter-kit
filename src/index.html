@@ -1,0 +1,52 @@
+<!doctype html>
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" ng-app="myApp"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>Angular Starter Kit</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css({.tmp,app}) styles/my_app.css -->
+        <link rel="stylesheet" href="styles/my_app.css">
+        <!-- endbuild -->
+    </head>
+    <body class="no-scroll">
+
+        <div loading-indicator> </div>
+        <div data-role="globalErrorIndicator"> </div>
+
+        <div class="ng-app-loading ng-cloak alert alert-warning">
+            <span class="fa fa-spin fa-circle-o-notch"></span>
+            Loading...
+        </div>
+
+        <div ui-view class="state-view"></div>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="../lib/jquery/dist/jquery.js"></script>
+    <script src="../lib/angular/angular.js"></script>
+    <script src="../lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="../lib/angular-translate/angular-translate.js"></script>
+    <script src="../lib/d3/d3.js"></script>
+    <script src="../lib/d3-tip/index.js"></script>
+    <script src="../lib/zeus-widgets/dist/js/zeus-widgets.js"></script>
+    <script src="../lib/zeus-widgets/dist/js/zeus-widgets.min.js"></script>
+    <script src="../lib/zeus-widgets/dist/js/zeus-widgets.templates.min.js"></script>
+    <script src="../lib/zeus-viz/dist/js/zeus-viz.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:remove --><script src="mock_json/mock.js"></script><!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/app-ui.js -->
+    <script src="scripts/index.js"></script>
+    <!-- endbuild -->
+
+</body>
+</html>
