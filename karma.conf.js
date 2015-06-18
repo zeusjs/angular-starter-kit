@@ -12,13 +12,15 @@ module.exports = function(config) {
         frameworks: ['jasmine'],
 
         // list of files / patterns to load in the browser
-        files: ['src/extern/jquery/dist/jquery.js',
-            'src/extern/angular/angular.js',
-            'src/extern/angular-mocks/angular-mocks.js',
-            'src/extern/angular-ui-router/release/angular-ui-router.js',
-            'src/extern/angular-bootstrap/ui-bootstrap-tpls.js',
-            'src/extern/angular-translate/angular-translate.js',
-            'src/extern/d3/d3.js',
+        files: [
+
+            'lib/jquery/dist/jquery.js',
+            'lib/angular/angular.js',
+            'lib/angular-mocks/angular-mocks.js',
+            'lib/angular-ui-router/release/angular-ui-router.js',
+            'lib/angular-bootstrap/ui-bootstrap-tpls.js',
+            'lib/angular-translate/angular-translate.js',
+            'lib/d3/d3.js',
 
             'src/scripts/index.js',
             'src/scripts/providers/*.js',
