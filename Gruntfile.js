@@ -29,7 +29,7 @@ module.exports = function(grunt) {
             },
             js: {
                 files: ['<%= project.src %>/scripts/{,*/}*.js'],
-                tasks: ['newer:jscs:src', 'newer:jshint:all'],
+                tasks: ['newer:jscs:src', 'newer:eslint:all'],
                 options: {
                     livereload: true
                 }
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
 
             jsTest: {
                 files: ['test/spec/{,*/}*.js'],
-                tasks: ['newer:jshint:test', 'karma']
+                tasks: ['newer:eslint:tests', 'karma']
             },
 
             sass: {
@@ -169,7 +169,7 @@ module.exports = function(grunt) {
                 options: {
                     variablesLike: /color_(?:role)|(?:status)|(?:viz)/,
                     stripPrefix: 'color_',
-                    module: 'zsApp'
+                    module: 'myApp'
                 },
                 files: {
                     'src/scripts/values/color_palette.js': ['src/styles/variables/colors/*.scss']
@@ -451,7 +451,8 @@ module.exports = function(grunt) {
                         dot: true,
                         cwd: '<%= project.src %>',
                         dest: 'docs',
-                        src: ['templates/{,*/}*.html',
+                        src: [
+                            'templates/{,*/}*.html',
                             'images/{,*/}*.{webp}']
                     },
                     {
@@ -609,7 +610,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('test', [
         'lint',
-        'jshint:test',
+        'eslint:tests',
         'connect:test',
         'karma'
     ]);
@@ -655,7 +656,7 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('default', [
-        'newer:jshint',
+        'newer:eslint',
         'test',
         'build'
     ]);
