@@ -34,3 +34,6 @@ node_modules
 # External libs
 libs
 lib/*
+
+# ng-sass-colors generated file
+src/scripts/values/color_palette.js
